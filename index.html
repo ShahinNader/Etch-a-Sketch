@@ -2,20 +2,57 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="masta" content="">
-  <meta name="etch-a-sketch" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="masta" content="">
+    <meta name="etch-a-sketch" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="css/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    
 </head>
 
-<body>
+<body onload= "createGrid()" class="bg">
+    
+    
 
-  <p>Hello, world!</p>
+    <div class="header">
+        <h1> Etch- A - sketch</h1>
+        
+    </div>
+    <div id = "mainbody" class="center">
+    </div>
 
-  <script src="js/script.js"></script>
+    <div id = "user-input" class ="bottom">
+        <div>
+            <label for="list"  class="inputs">Choose grid-size</label>
+        <select id="grid" name="list" class="inputs">
+            <option value="4">4x4</option>
+            <option value="16">16x16</option>
+            <option value="32">32x32</option>
+            <option value="64">64x64</option>
+            <option value="128">128x128</option>
+        </select>
+        <button type="button" id="size" class="inputs"> set size / clear</button>
+        </div>
+        <div>
+            <form class="inputs">
+                <label for="favcolor">Select color:</label>
+                <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+                
+              </form>
+        </div>
+        <div class="uglyDiv">
+            <label for="trail" class="inputs"> trail effect</label><br>  
+            <input type="checkbox" id="trail name"  class="inputs" style="float:left">
+            
+            <div class = "slidecontainer inputs">
+                <input type="range" min="500" max="5000" value="1000" class="slider" id="myRange">
+            </div>
+        </div>
+    </div>
+
 </body>
-
+<script type="text/javascript" src="script.js"></script>
 </html>
+
